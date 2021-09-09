@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(195, 74, 252); 
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #9809a5; 
+  }
+
+.navbar {
+    display: flex;
+    width: 100%;
+    top: 0%;
+    /* background: rgb(238,174,202); */
+    /* background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); */
+    height: 9vh;
+    position: fixed;
+}
+
+.navbar .nav-links {
+    position: absolute;
+    right: 0%;
+}
+
+.navbar .nav-logo a {
+    color: black;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    font-size: 1.2rem;
+}
+
+.navbar .nav-logo  {
+    height: 100%;
+}
+.navbar .nav-logo a h4  {
+    padding: 22%;
+    /* margin: 8px 8px; */
+}
+
+.navbar .nav-links ul {
+    margin-right: 3vw;
+    display: flex;
+    list-style: none;
+}
+
+.navbar .nav-links ul li {
+    /* margin-right: 3vw; */
+    margin-top: 2.5vh;
+}
+
+.navbar .nav-links ul li a {
+    color: black;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 1.1rem;
+}
+
+/* css of register */
+.main{
+    margin-top: 70px;
+    background-image: url('./image/bg.png');
+}
+
+.body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-image: url('./image/bg3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgb(186, 21, 252);
+}
+
+.container .title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container .title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.content form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .user-details .input-box {
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+
+form .input-box span.details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.user-details .input-box input:focus, .user-details .input-box input:valid {
+    border-color: #9b59b6;
+}
+
+form .category {
+    display: flex;
+    width: 80%;
+    margin: 14px 0;
+    justify-content: space-between;
+}
+
+form .category label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+form .button {
+    height: 45px;
+    margin: 35px 0
+}
+
+form .button input {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+form .button input:hover {
+    /* transform: scale(0.99); */
+    background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+}
+
+@media(max-width: 584px) {
+    .container {
+        max-width: 100%;
+    }
+    form .user-details .input-box {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    form .category {
+        width: 100%;
+    }
+    .content form .user-details {
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+    .user-details::-webkit-scrollbar {
+        width: 5px;
+    }
+}
+
+@media(max-width: 459px) {
+    .container .content .category {
+        flex-direction: column;
+    }
+}
+
+#err{
+    color: rgb(241, 89, 89);
+}
+
+/* Home page CSS */
+.homePage{
+    margin: 0px 0px 0px 0px ;
+    padding: 0%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    height: 100vh;
+    background-image: url('./image/bg3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.homePage .content-left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.homePage .content-right{
+    width: 50%;
+}
+
+.homePage .content-left .circle{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: rgb(49, 238, 191);
+    position: relative;
+    top: 12%;
+    /* border: 2px solid white; */
+    backdrop-filter: blur(10px);
+    opacity: 0.75;
+}
+
+.homePage .content-left .square{
+    width: 40vw;
+    height: 40vh;
+    margin: 0px auto;
+    background: rgba(200, 47, 247, 0.849);
+    border-radius: 2px;
+}
+
+.homePage .content-left .circle1{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgb(49, 238, 191);
+    position: relative;
+    bottom: 12%;
+    /* border: 2px solid white; */
+    backdrop-filter: blur(10px);
+    opacity: 0.75;
+}
+.homePage .content-right a{
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+}
+
+.homePage .content-right #btn{
+    width: 200px;
+    height: 40px;
+    background: rgb(205, 74, 245);
+    border: none;
+    margin-top: 250px;
+    margin-left: 12vw;
+    border-radius: 20px;
+}
+
+.event-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.event-container-left{
+    background-color: rgba(255, 255, 255, 0.452);
+    border-radius: 5px;
+    border: 2px solid white;
+    margin-top: 80px;
+    height: 85%;
+    width: 50%;
+    overflow-y: auto;
+}
+.event-container-right{
+    background-color: rgba(255, 255, 255, 0.452);
+    border-radius: 5px;
+    border: 2px solid white;
+    margin-top: 80px;
+    height: 70%;
+    width: 50%;
+}
+
+.inputField{
+    margin-top: 120px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#msg{
+    color: rgb(27, 7, 145);
+}
+
+/* Card CSS */
+.card{
+    width: 80%;
+    border: 2px solid white;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    background-color: rgba(10, 241, 68, 0.404);
+}
+
+.card h3, h4{
+    margin-left: 15px;
+}
+
+.homePage .content-left .square .txt{
+    height: 100%;
+    width: 70%;
+    float: right;
+}
+
+.homePage .content-left .square .txt h2{
+    margin-top: 50px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+.homePage .content-left .square .txt h3{
+    margin-top: 50px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
