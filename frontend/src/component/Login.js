@@ -16,7 +16,7 @@ function Login() {
         if (email === "" || password === "") {
             setMsg('All field are require')
         } else {
-            axios.post('https://new-mern-event-app.herokuapp.com/signin', { email, password })
+            axios.post('/signin', { email, password })
                 .then((res) => {
                     console.log(res);
                     history.push("/")

@@ -10,16 +10,15 @@ function Register() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [cpassword, setCpassword] = useState('');
-    const user = { name, email, password, cpassword };
+    // const user = { name, email, password, cpassword };
     const PostData = async (e) => {
         e.preventDefault();
         if (password !== cpassword) {
             setErr('Password mismatch')
         } else {
             try{
-                let res = await fetch('https://new-mern-event-app.herokuapp.com/register',{
+                let res = await fetch('/register',{
                     method:'POST',
-                    mode:'no-cors',
                     headers:{
                         'Accept':'application/json',
                         'Content-type':'application/json'
@@ -29,9 +28,9 @@ function Register() {
                     })
                 })
                 
-                if(res.status == 404){
+                if(res.status === 400){
                     setErr('All fields are require')
-                }else if(res.status == 404){
+                }else if(res.status === 404){
                     setErr('Email already exist')
                 }else{
                     history.push('/')

@@ -14,7 +14,7 @@ const Evevnt = () => {
     const data = {event, date};
     const PostEvent = async (e) => {
         e.preventDefault();
-        axios.post('https://new-mern-event-app.herokuapp.com/addEvent', { data })
+        axios.post('/addEvent', { data })
             .then((res) => {
                 setMsg("Event is added. Refresh page to see event");
             }).catch((err) => {
@@ -23,11 +23,11 @@ const Evevnt = () => {
     }
 
     const callEvent = async () => {
-        axios.get('https://new-mern-event-app.herokuapp.com/findEvent')
+        axios.get('/findEvent')
         .then((res) => {
                 setPost(res.data);
             }).catch((err) => {
-                history.push('/login')
+                history.push('/signin')
             });
     }
 

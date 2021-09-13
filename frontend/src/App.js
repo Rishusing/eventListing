@@ -6,6 +6,7 @@ import Error from './component/Error';
 import Navbar from './component/Navbar';
 import Event from './component/Event'
 import { Route, Switch } from 'react-router-dom'
+import Test from './component/Test';
 
 
 function App() {
@@ -24,6 +25,9 @@ function App() {
         </Route>
         <Route path="/event">
           <Event/>
+        </Route>
+        <Route path="/test">
+          <Test/>
         </Route>
         <Route>
           <Error />
